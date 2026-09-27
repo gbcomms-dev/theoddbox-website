@@ -1,0 +1,152 @@
+/* The Oddbox — landing page styles */
+:root {
+  --bg: #0e0f13;
+  --bg-alt: #15171d;
+  --surface: #1b1e26;
+  --text: #f4f4f6;
+  --text-muted: #a3a7b3;
+  --accent: #ff5c39;
+  --accent-soft: rgba(255, 92, 57, 0.12);
+  --border: #262a34;
+  --radius: 14px;
+  --maxw: 1080px;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3, .logo-text { font-family: var(--font-display); line-height: 1.15; letter-spacing: -0.01em; }
+
+a { color: inherit; text-decoration: none; }
+
+.accent { color: var(--accent); }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(14, 15, 19, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.logo-mark { color: var(--accent); font-size: 1.4rem; }
+.logo-text { font-size: 1.15rem; font-weight: 700; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  padding: 8px 16px; border-radius: 999px;
+}
+.nav-cta:hover { border-color: var(--accent); }
+
+/* Buttons */
+.btn {
+  display: inline-block; font-weight: 600; font-size: 1rem;
+  padding: 14px 26px; border-radius: 999px; cursor: pointer;
+  border: 1px solid transparent; transition: transform 0.15s, background 0.2s, border-color 0.2s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #ff7355; }
+.btn-ghost { border-color: var(--border); color: var(--text); }
+.btn-ghost:hover { border-color: var(--accent); }
+.btn-block { width: 100%; }
+
+/* Hero */
+.hero { padding: 96px 0 80px; background: radial-gradient(1200px 500px at 70% -10%, var(--accent-soft), transparent 60%); }
+.eyebrow, .section-eyebrow {
+  text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem;
+  font-weight: 600; color: var(--accent); margin-bottom: 16px;
+}
+.hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); font-weight: 700; margin-bottom: 22px; }
+.lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); color: var(--text-muted); max-width: 620px; margin-bottom: 34px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 26px; }
+.hero-note { color: var(--text-muted); font-size: 0.9rem; letter-spacing: 0.02em; }
+
+/* Sections */
+section { scroll-margin-top: 80px; }
+.services, .approach, .contact { padding: 80px 0; }
+.services { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-weight: 600; margin-bottom: 12px; }
+.section-sub { color: var(--text-muted); max-width: 560px; margin-bottom: 42px; font-size: 1.05rem; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px; transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card-icon {
+  width: 46px; height: 46px; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent);
+  border-radius: 12px; font-size: 1.4rem; margin-bottom: 18px;
+}
+.card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.card p { color: var(--text-muted); font-size: 0.98rem; }
+
+/* Approach */
+.approach-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+.approach-copy p { color: var(--text-muted); margin-bottom: 22px; max-width: 520px; }
+.checklist { list-style: none; display: grid; gap: 12px; }
+.checklist li { position: relative; padding-left: 30px; color: var(--text); }
+.checklist li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  color: var(--accent); font-weight: 700;
+}
+.approach-stats { display: grid; gap: 16px; }
+.stat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px 24px;
+  display: flex; align-items: baseline; gap: 16px;
+}
+.stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-label { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Contact */
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 640px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field-full { grid-column: 1 / -1; }
+label { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+input, textarea {
+  font-family: var(--font-body); font-size: 1rem; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 14px; resize: vertical;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+input::placeholder, textarea::placeholder { color: #6b7080; }
+.form-note { margin-top: 12px; color: var(--text-muted); font-size: 0.88rem; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 32px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-inner p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .cards { grid-template-columns: 1fr; }
+  .approach-inner { grid-template-columns: 1fr; gap: 36px; }
+  .contact-form { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .nav-links { gap: 14px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 64px 0 56px; }
+  .services, .approach, .contact { padding: 60px 0; }
+}

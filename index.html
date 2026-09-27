@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Oddbox — Unconventional Digital Presence</title>
+  <meta name="description" content="The Oddbox is a two-founder studio building unconventional digital presence and lead capture for small businesses and professional-service firms." />
+  <meta property="og:title" content="The Oddbox — Unconventional Digital Presence" />
+  <meta property="og:description" content="Digital presence and lead capture, done differently. Landing pages, lead capture, and visual direction for small businesses." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="The Oddbox home">
+        <span class="logo-mark" aria-hidden="true">◨</span>
+        <span class="logo-text">The Oddbox</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Approach</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Digital presence studio</p>
+        <h1>Unconventional digital presence,<br /><span class="accent">built to convert.</span></h1>
+        <p class="lede">
+          The Oddbox is a two-founder studio pairing technical craft with creative direction —
+          helping small businesses and professional-service firms show up online and capture
+          more of the right leads.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#services" class="btn btn-ghost">See what we do</a>
+        </div>
+        <p class="hero-note">Landing pages · Lead capture · Visual direction</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <p class="section-eyebrow">What we do</p>
+        <h2 class="section-title">The Digital Presence Starter</h2>
+        <p class="section-sub">A focused, fixed-scope package to get you live and generating leads — fast.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◧</div>
+            <h3>Digital Presence</h3>
+            <p>A clean, fast, mobile-first landing page that makes your business look credible from the first scroll.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◪</div>
+            <h3>Lead Capture</h3>
+            <p>Conversion-focused forms and calls-to-action wired to turn visitors into qualified enquiries.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◩</div>
+            <h3>Visual Direction</h3>
+            <p>A distinct, considered look — typography, colour, and layout that set you apart from the template crowd.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="work" class="approach">
+      <div class="container approach-inner">
+        <div class="approach-copy">
+          <p class="section-eyebrow">Why The Oddbox</p>
+          <h2 class="section-title">Small studio. Sharp output.</h2>
+          <p>
+            Two founders — one technical, one creative — means no hand-offs, no bloat, and no
+            agency overhead. You work directly with the people building your site.
+          </p>
+          <ul class="checklist">
+            <li>Fixed scope, fixed price — no surprises</li>
+            <li>Live in days, not months</li>
+            <li>Built to load fast and rank well</li>
+            <li>Designed to look nothing like a template</li>
+          </ul>
+        </div>
+        <div class="approach-stats">
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Founders, zero middlemen</span></div>
+          <div class="stat"><span class="stat-num">1</span><span class="stat-label">Focused starter package</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Odd ideas, well executed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <p class="section-eyebrow">Get in touch</p>
+        <h2 class="section-title">Let's build something odd.</h2>
+        <p class="section-sub">Tell us about your business and what you need online. We'll reply within one working day.</p>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@business.com" required />
+          </div>
+          <div class="field field-full">
+            <label for="message">What do you need?</label>
+            <textarea id="message" name="message" rows="4" placeholder="A quick note about your business and goals..."></textarea>
+          </div>
+          <div class="field-full">
+            <button type="submit" class="btn btn-primary btn-block">Send enquiry</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite">
+              Form is a placeholder — wiring to a live inbox coming soon.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo-text">The Oddbox</span>
+      <p>© <span id="year"></span> The Oddbox. Unconventional digital presence.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
